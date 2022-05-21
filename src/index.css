@@ -1,0 +1,29 @@
+.img-promo {
+  height: 345px !important;
+  width: 235px !important;
+  object-fit: contain !important;
+}
+
+.img-booklist {
+  height: 345px !important;
+  width: 235px !important;
+  object-fit: contain !important;
+}
+
+.img-bookcart {
+  height: 175px !important;
+  width: 130px !important;
+  object-fit: contain !important;
+}
+
+.circle-number {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  background: red;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  font: 20px;
+}
