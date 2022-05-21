@@ -23,12 +23,16 @@ function Complain() {
   const [state] = useContext(UserContext);
 
   useEffect(() => {
-    socket = io("http://localhost:5005", {
-      auth: {
-        token: localStorage.getItem("token"),
-      },
-      // code here
-    });
+    socket = io(
+      "https://graceful-croquembouche-c1b833.netlify.app/" ||
+        "http://localhost:5005",
+      {
+        auth: {
+          token: localStorage.getItem("token"),
+        },
+        // code here
+      }
+    );
 
     socket.on("new message", () => {
       socket.emit("load messages", contact?.id);

@@ -23,11 +23,15 @@ function ComplainAdmin() {
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
-    socket = io("http://localhost:5005/", {
-      auth: {
-        token: localStorage.getItem("token"),
-      },
-    });
+    socket = io(
+      "https://graceful-croquembouche-c1b833.netlify.app/" ||
+        "http://localhost:5005/",
+      {
+        auth: {
+          token: localStorage.getItem("token"),
+        },
+      }
+    );
 
     socket.on("new message", () => {
       socket.emit("load messages", contact?.id);
@@ -136,7 +140,8 @@ function ComplainAdmin() {
     setOnline(false);
   };
 
-  const imgPATH = "http://localhost:5005/uploads/profile/";
+  const imgPATH =
+    "https://res.cloudinary.com/dycnwfivg/image/upload/v1653153835/";
 
   return (
     <div
