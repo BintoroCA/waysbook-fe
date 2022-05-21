@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const API = axios.create({
   baseURL:
-    "https://waysbook-bintoro.herokuapp.com/" ||
+    "https://waysbook-bintoro.herokuapp.com/api/v1/" ||
     "http://localhost:5005/api/v1/",
 });
 
