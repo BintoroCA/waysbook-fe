@@ -24,8 +24,7 @@ function ComplainAdmin() {
 
   useEffect(() => {
     socket = io(
-      "https://graceful-croquembouche-c1b833.netlify.app/" ||
-        "http://localhost:5005/",
+      "https://waysbook-bintoro.herokuapp.com/" || "http://localhost:5005/",
       {
         auth: {
           token: localStorage.getItem("token"),
