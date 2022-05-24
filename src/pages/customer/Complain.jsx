@@ -178,16 +178,16 @@ function Complain() {
               <div key={index}>
                 <div
                   className={`d-flex py-1 ${
-                    item.idSender === state.user.id
-                      ? "justify-content-end"
-                      : "justify-content-start"
+                    item.idSender != state.user.id
+                      ? "justify-content-start"
+                      : "justify-content-end"
                   }`}
                 >
                   <div
                     className={
-                      item.idSender === state.user.id
-                        ? cssModule.chatOther
-                        : cssModule.chatMe
+                      item.idSender != state.user.id
+                        ? cssModule.chatMe
+                        : cssModule.chatOther
                     }
                   >
                     {item.message}
